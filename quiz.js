@@ -1,7 +1,7 @@
 const correctAnswers = ['D', 'B', 'D', 'A', 'D'];
 const form = document.querySelector('.quiz-form');
 const scores = document.querySelector('.score-board');
-
+const answers = document.querySelector('.correct-answers')
 form.addEventListener('submit', e =>{
     e.preventDefault();
 
@@ -18,6 +18,7 @@ form.addEventListener('submit', e =>{
     scrollTo(0, 0);
     scores.querySelector('span').textContent = `${score}%`;
     scores.classList.remove('d-none');
+    answers.classList.remove('d-none');
 
     let output = 0;
     const timer = setInterval(() =>{
